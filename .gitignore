@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+data/raw/
+data/processed/
+
+# Model files
+models/*.pt
+models/*.pth
+models/*.ckpt
+
+# Results
+results/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
