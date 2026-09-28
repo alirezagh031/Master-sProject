@@ -1,23 +1,3 @@
-"""
-Stage 5 - Multi-Timeframe Base Learner Training.
-
-Trains six independent, single-timeframe base learners:
-
-    M15 Logistic Regression   M15 LightGBM
-    H1  Logistic Regression   H1  LightGBM
-    D1  Logistic Regression   D1  LightGBM
-
-Each one is trained ONLY on its own timeframe's feature set and produces a
-3-class probability vector [P(DOWN), P(NEUTRAL), P(UP)] for every M15
-decision timestamp. No voting, averaging, or ensembling happens here - the
-18 resulting probability columns (6 models x 3 classes) are handed off,
-unmodified, to a later evolutionary / multi-objective ensemble stage.
-
-Run from the project root as:
-
-    python -m src.section5.train_base_learners
-"""
-
 from __future__ import annotations
 
 import gc

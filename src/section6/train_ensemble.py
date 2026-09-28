@@ -1,23 +1,3 @@
-"""
-Stage 6 - Evolutionary Multi-Objective Ensemble.
-
-    M15/H1/D1 -> 6 Base Learners -> 18 class probabilities
-              -> Evolutionary Multi-Objective Ensemble (this stage)
-              -> final 3-class prediction
-
-Reads Stage 5's validation_base_predictions.parquet (never the locked
-test_base_predictions.parquet -- that file is not imported, referenced, or
-opened anywhere in this module). For each of 3 causal volatility regimes,
-NSGA-II searches a 6-weight (one per base learner) combination that jointly
-maximizes macro-F1 and a Sharpe-style trading objective, producing a Pareto
-front per regime. A single compromise point is selected per regime for the
-headline numbers; the full fronts are saved separately so the trade-off is
-visible, not just one arbitrary scalarization.
-
-Run from the project root as:
-
-    python -m src.section6.train_ensemble
-"""
 from __future__ import annotations
 
 import json

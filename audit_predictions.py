@@ -1,18 +1,3 @@
-"""
-Lightweight, read-only audit of an already-produced Stage 5 prediction file.
-
-Does NOT modify anything, does NOT retrain anything. Reuses the exact
-verification logic from train_base_learners.py (already proven during the
-real Stage 5 run -- that's where "[verify/validation] OK" came from) and
-adds the couple of checks that function does not already cover: printing
-the exact column names for visual confirmation, and STRICT timestamp
-uniqueness (is_monotonic_increasing alone allows adjacent duplicates).
-
-Usage (from the project root):
-
-    python audit_predictions.py
-    python audit_predictions.py --file data/processed/section5/predictions/test_base_predictions.parquet
-"""
 from __future__ import annotations
 
 import argparse

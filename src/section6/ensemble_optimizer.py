@@ -1,22 +1,3 @@
-"""
-Multi-objective ensemble weight optimization (NSGA-II).
-
-Optimizes a 6-gene weight vector (one weight per base learner) to jointly
-maximize [macro_f1, sharpe] on a given subset of rows (a single volatility
-regime). Selection follows the standard NSGA-II mechanism -- fast
-non-dominated sorting + crowding distance -- exactly as in the original
-algorithm. The crossover/mutation operators are a simpler, easier-to-verify
-substitute for the literature's usual SBX/polynomial-mutation pair (blend
-crossover + Gaussian mutation, both bounded to [0, 1]); the search dynamics
-this produces are standard, but this is not a byte-for-byte reimplementation
-of the original NSGA-II paper's exact operators, so it's described here
-plainly rather than overclaimed.
-
-If pymoo is importable, its NSGA2 implementation is used instead (sharing
-the same evaluation function), since the spec prefers it when already
-available. Any failure in that path (missing package, API mismatch,
-whatever) falls back to the built-in implementation automatically.
-"""
 from __future__ import annotations
 
 from typing import Callable, Optional
