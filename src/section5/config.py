@@ -1,18 +1,3 @@
-"""
-Configuration for Stage 5 - Multi-Timeframe Base Learner Training.
-
-Thesis: "An Evolutionary Ensemble Learning Based on Multiple Time Frames for
-Explainable Financial Markets Analysis" (XAUUSD, M15 / H1 / D1 timeframes).
-
-All paths are resolved relative to the project root, so the code behaves
-identically no matter what directory it is launched from, as long as it is
-run as:
-
-    python -m src.section5.train_base_learners
-
-from the project root (Master-sProject/).
-"""
-
 from __future__ import annotations
 
 from pathlib import Path

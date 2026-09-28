@@ -1,10 +1,4 @@
-"""
-Configuration for Stage 6 - Evolutionary Multi-Objective Ensemble.
 
-Reuses Stage 5's config for anything that's already defined there (paths,
-class encoding, model naming) rather than duplicating it -- see
-src.section5.config. Only Stage-6-specific values live here.
-"""
 from __future__ import annotations
 
 from pathlib import Path

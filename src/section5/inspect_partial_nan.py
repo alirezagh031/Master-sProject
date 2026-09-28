@@ -1,16 +1,3 @@
-"""
-Read-only diagnostic for the H1/D1 *_partial_* NaN pattern.
-
-Does NOT modify any file, does NOT train anything, does NOT touch the
-Stage 5 pipeline or config. Answers questions 1-6 and 8 from a purely
-empirical inspection of the two parquet files. Question 7 (Stage 3
-alignment code) and the final "likely cause" (question 9) still need the
-actual Stage 3 source and/or this script's real output to confirm.
-
-Usage (from the project root, with the .venv active):
-
-    python inspect_partial_nan.py
-"""
 from __future__ import annotations
 
 from pathlib import Path
